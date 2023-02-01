@@ -1,0 +1,237 @@
+:root {
+    --sideBackground: rgb(49, 156, 250);
+    --sideText: white;
+    --primaryColor: rgba(206, 206, 206, 0.798);
+    --accentColor: rgb(181, 231, 0);
+}
+
+.material-symbols-outlined {
+  color: black;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr;
+    background-color: var(--primaryColor);
+    font-family: 'Roboto Slab', serif;
+}
+
+.header{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    box-shadow: 0px 4px 4px -4px gray;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.header-img {
+    background-color: slategray;
+}
+
+.header .top-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.header .top-bar img {
+    height: 2.5rem;
+    border: 3px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.top-bar-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .bottom-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.bottom-bar-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.bottom-bar img {
+    height: 3.5rem;
+    border: 3px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#button-new {
+    margin-left: auto;
+}
+
+.header-button {
+    padding: .5rem;
+    background-color: var(--sideBackground);
+    color: var(--sideText);
+    font-size: 1rem;
+    border-radius: 2rem;
+    width: 100px;
+}
+
+.header-button:hover {
+    position: relative;
+    scale: 1.1;
+}
+
+#search {
+    padding: .5rem;
+    border-radius: 2em;
+    margin-right: 50px;
+    background-color: var(--primaryColor);
+}
+
+.sidebar{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: var(--sideBackground);
+    color: var(--sideText);
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar .material-symbols-outlined {
+    color: var(--sideText);
+    font-variation-settings: 'FILL' 1;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.side1 {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.side2,
+.side3 {
+    list-style: none;
+    text-decoration: none;
+    color: var(--sideText);
+    margin-left: 0;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 3px;
+}
+
+.sidebar a:visited {
+    text-decoration: none;
+    color: var(--sideText);
+}
+
+.sidebar a:link{
+    text-decoration: none;
+}
+
+.sidebar li:hover{
+    position: relative;
+    transform: translateX(20px);
+    scale: 1.1;
+}
+
+.side1 > .material-icons {
+    font-size: 48px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10px;
+    column-gap: 50px;
+    row-gap: 25px;
+}
+
+.projects {
+    grid-area: 1 / 1/ 3 / 2;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.project-card {
+    border-left: 10px solid var(--accentColor);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: rgba(47, 66, 85, 0.1);
+    box-shadow: 2px 2px 4px gray;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+.project-card .icons {
+    justify-self: end;
+}
+
+.project-card h3{
+    margin-bottom: 0;
+}
+
+.ann-card {
+    padding: 10px;
+    box-shadow: 0px 2px 2px -2px gray;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.ann-card p {
+    font-size: .75rem;
+}
+
+.ann-card h4 {
+    margin: 0;
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.trending-card img {
+    height: 2rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 3px;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.trending-card h4 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.trending-card p {
+    font-size: .75rem;
+    margin: 0;
+}
